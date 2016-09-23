@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.starterkit.javafx.controller.ImageViewController">
+  <children>
+    <ListView fx:id="imageListView" layoutX="636.0" layoutY="60.0" prefHeight="480.0" prefWidth="250.0" />
+    <Button fx:id="previousButton" layoutX="14.0" layoutY="14.0" minWidth="29.0" mnemonicParsing="false" onAction="#previousButtonAction" prefHeight="36.0" prefWidth="301.0" text="&lt;" />
+    <Button fx:id="directoryChooserButton" layoutX="14.0" layoutY="550.0" mnemonicParsing="false" onAction="#directoryChooserButtonAction" prefHeight="36.0" prefWidth="301.0" text="Choose Directory" />
+    <Button fx:id="nextButton" layoutX="325.0" layoutY="14.0" minWidth="29.0" mnemonicParsing="false" onAction="#nextButtonAction" prefHeight="36.0" prefWidth="301.0" text="&gt;" />
+    <HBox id="hBox" layoutX="14.0" layoutY="60.0">
+      <ScrollPane fx:id="slidePane" pannable="true" prefHeight="480.0" prefWidth="612.0">
+        <content>
+          <HBox fx:id="hBox" prefHeight="480.0" prefWidth="612.0">
+            <children>
+              <ImageView fx:id="imageView" onScroll="#imageViewOnScrollAction" opacity="1.0" pickOnBounds="true" preserveRatio="true" />
+            </children>
+          </HBox>
+        </content>
+      </ScrollPane>
+    </HBox>
+    <Button fx:id="slideShowButton" layoutX="325.0" layoutY="550.0" mnemonicParsing="false" onAction="#slideShowButtonAction" prefHeight="36.0" prefWidth="301.0" text="Start Slide Show" />
+    <Button fx:id="zoomInButton" layoutX="636.0" layoutY="14.0" mnemonicParsing="false" onAction="#zoomIn" prefHeight="36.0" prefWidth="120.0" text="Zoom In" />
+    <Button id="zoomIn" fx:id="zoomOutButton" layoutX="766.0" layoutY="14.0" mnemonicParsing="false" onAction="#zoomOut" prefHeight="36.0" prefWidth="120.0" text="Zoom out" />
+    <Button id="zoomInButton" fx:id="resetZoomButton" layoutX="636.0" layoutY="550.0" mnemonicParsing="false" onAction="#resetZoom" prefHeight="36.0" prefWidth="250.0" text="Reset Zoom" />
+    <Pane layoutX="350.0" layoutY="200.0" prefHeight="200.0" prefWidth="200.0" />
+  </children>
+</AnchorPane>

@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Built-By: PPATRONI
+Class-Path: log4j-1.2.17.jar spring-web-4.3.2.RELEASE.jar spring-aop-4
+ .3.2.RELEASE.jar spring-beans-4.3.2.RELEASE.jar spring-context-4.3.2.
+ RELEASE.jar spring-expression-4.3.2.RELEASE.jar spring-core-4.3.2.REL
+ EASE.jar commons-logging-1.2.jar jackson-annotations-2.8.2.jar jackso
+ n-core-2.8.2.jar jackson-databind-2.8.2.jar
+Build-Jdk: 1.8.0_66
+Created-By: Maven Integration for Eclipse
+Main-Class: com.starterkit.javafx.Startup
+
