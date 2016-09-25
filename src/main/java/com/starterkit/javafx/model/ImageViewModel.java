@@ -21,6 +21,7 @@ public class ImageViewModel {
 
 	private List<String> fileNames = new ArrayList<>();
 
+	// REV: klasa Image nie powinna znajdowac sie w modelu
 	private List<Image> images = new ArrayList<>();
 
 	public ImageViewModel() {
@@ -58,6 +59,7 @@ public class ImageViewModel {
 		if (images.indexOf(image) != images.size() - 1) {
 			return images.get(images.indexOf(image) + 1);
 		} else {
+			// REV: rzucasz wyjatek, ale go nie obslugujesz
 			throw new IndexOutOfBoundsException();
 		}
 	}
@@ -66,6 +68,7 @@ public class ImageViewModel {
 		if (images.indexOf(image) != 0) {
 			return images.get(images.indexOf(image) - 1);
 		} else {
+			// REV: j.w.
 			throw new IndexOutOfBoundsException();
 		}
 	}

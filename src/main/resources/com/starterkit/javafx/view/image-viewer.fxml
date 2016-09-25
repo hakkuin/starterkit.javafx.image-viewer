@@ -12,11 +12,14 @@
   <children>
     <ListView fx:id="imageListView" layoutX="636.0" layoutY="60.0" prefHeight="480.0" prefWidth="250.0" />
     <Button fx:id="previousButton" layoutX="14.0" layoutY="14.0" minWidth="29.0" mnemonicParsing="false" onAction="#previousButtonAction" prefHeight="36.0" prefWidth="301.0" text="&lt;" />
+    <!-- REV: teksty z bundla -->
     <Button fx:id="directoryChooserButton" layoutX="14.0" layoutY="550.0" mnemonicParsing="false" onAction="#directoryChooserButtonAction" prefHeight="36.0" prefWidth="301.0" text="Choose Directory" />
     <Button fx:id="nextButton" layoutX="325.0" layoutY="14.0" minWidth="29.0" mnemonicParsing="false" onAction="#nextButtonAction" prefHeight="36.0" prefWidth="301.0" text="&gt;" />
+    <!-- REV: ten HBox nie jest potrzebny -->
     <HBox id="hBox" layoutX="14.0" layoutY="60.0">
       <ScrollPane fx:id="slidePane" pannable="true" prefHeight="480.0" prefWidth="612.0">
         <content>
+          <!-- REV: ten HBox nie jest potrzebny -->
           <HBox fx:id="hBox" prefHeight="480.0" prefWidth="612.0">
             <children>
               <ImageView fx:id="imageView" onScroll="#imageViewOnScrollAction" opacity="1.0" pickOnBounds="true" preserveRatio="true" />
@@ -29,6 +32,7 @@
     <Button fx:id="zoomInButton" layoutX="636.0" layoutY="14.0" mnemonicParsing="false" onAction="#zoomIn" prefHeight="36.0" prefWidth="120.0" text="Zoom In" />
     <Button id="zoomIn" fx:id="zoomOutButton" layoutX="766.0" layoutY="14.0" mnemonicParsing="false" onAction="#zoomOut" prefHeight="36.0" prefWidth="120.0" text="Zoom out" />
     <Button id="zoomInButton" fx:id="resetZoomButton" layoutX="636.0" layoutY="550.0" mnemonicParsing="false" onAction="#resetZoom" prefHeight="36.0" prefWidth="250.0" text="Reset Zoom" />
+    <!-- REV: niepotrzebny element -->
     <Pane layoutX="350.0" layoutY="200.0" prefHeight="200.0" prefWidth="200.0" />
   </children>
 </AnchorPane>

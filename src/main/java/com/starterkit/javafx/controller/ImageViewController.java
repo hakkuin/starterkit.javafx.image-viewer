@@ -29,6 +29,8 @@ public class ImageViewController {
 	private static final Logger LOG = Logger.getLogger(ImageViewController.class);
 
 	private static final int DELAY = 3000;
+	
+	// REV: model nie jest wstrzykiwany
 	@FXML
 	private final ImageViewModel model = new ImageViewModel();
 
@@ -93,6 +95,7 @@ public class ImageViewController {
 			}
 		});
 
+		// REV: lepiej zrobic to w CSS
 		hBox.setAlignment(Pos.CENTER);
 
 		LOG.debug("leaving initialize()");
@@ -128,6 +131,7 @@ public class ImageViewController {
 		LOG.debug("entering: previousButtonAction()");
 
 		displayImage(model.getPreviousImage(imageView.getImage()));
+		// REV: zakomentowany kod
 //		imageView.setImage(model.getPreviousImage(imageView.getImage()));
 //		hBox.resize(model.getPreviousImage(imageView.getImage()).getWidth(), model.getPreviousImage(imageView.getImage()).getHeight());
 
@@ -213,6 +217,7 @@ public class ImageViewController {
 	@FXML
 	public void slideShowButtonAction(ActionEvent event) {
 
+		// REV: bindy
 		nextButton.setDisable(true);
 		previousButton.setDisable(true);
 		directoryChooserButton.setDisable(true);
@@ -226,8 +231,10 @@ public class ImageViewController {
 
 				for (Image image : model.getImages()) {
 					try {
+						// REV: imageView to element GUI
 						imageView.setImage(image);
 						hBox.resize(image.getWidth(), image.getHeight());
+						// REV: po co delay?
 						Thread.sleep(DELAY);
 					} catch (InterruptedException e) {
 						throw new RuntimeException("Thread interrupted", e);
@@ -240,6 +247,7 @@ public class ImageViewController {
 			protected void succeeded() {
 				LOG.debug("succeeded() called");
 
+				// REV: bindy
 				nextButton.setDisable(false);
 				previousButton.setDisable(false);
 				directoryChooserButton.setDisable(false);

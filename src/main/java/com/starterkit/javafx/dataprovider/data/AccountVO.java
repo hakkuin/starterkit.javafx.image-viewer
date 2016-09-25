@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
  *
  * @author Pawel
  */
+// REV: nieuzywana klasa
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class AccountVO {
 
